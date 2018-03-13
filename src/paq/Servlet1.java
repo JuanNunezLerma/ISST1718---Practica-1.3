@@ -47,6 +47,7 @@ public class Servlet1 extends HttpServlet {
 			Usuario usuario2 = new Usuario("Juan", "Nuñez Lerma", "jnl00005@red.ujaen.es");
 			LUsuarios.add(usuario1);
 			LUsuarios.add(usuario2);
+			request.setAttribute("LUsuarios", LUsuarios);//Pasamos la lista usuarios al objeto request para que pueda interactuar con el jsp.
 			
 			// Se leen los parámetros
 			String usuario = request.getParameter("usuario");
